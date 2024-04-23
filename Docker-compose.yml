@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mysqldbservice:
+    container_name: mysqldbcontainer
+    image: mysql 
+
+  springbootappservice:
+    container_name: springbootappcontainer
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      
